@@ -1,0 +1,236 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+.nav-item {
+    padding-left: 80px;
+
+}
+
+.nav-link {
+    color: white;
+}
+
+.d-flex {
+    padding-left: 80px;
+}
+
+.btn-outline-success {
+    border-radius: 50px;
+    width: 180px; /* Makes the button fully rounded */
+    background-color: #577238; /* Change to your desired background color */
+    color: white; /* Text color */
+    border: none; /* Removes the default border */
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer; /* Changes cursor to pointer when hovering */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-outline-success:hover {
+    background-color: #2c4411; /* Background color on hover */
+}
+
+
+.navbar-custom {
+    background-color: transparent;
+    background: linear-gradient(to right, #000000, #111d00, #131a09);
+    
+    
+}
+
+.navbar-custom .nav-link {
+    color: white;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #ff4b5c;
+}
+
+.hero-header {
+    background: url('back2.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    position: relative;
+    padding: 180px 0;
+   
+    
+}
+
+.hero-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-custom {
+    background-color: #DDD8D7;
+    color: #951414;
+    border-radius: 45px;
+    padding: 20px 50px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+
+}
+
+.btn-custom:hover {
+    background-color: #273418;
+    color: white;
+}
+
+.navbar-custom {
+    background-color: black;
+}
+
+.navbar-custom .nav-link {
+    color: white;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #ff4b5c;
+}
+
+.display-3 {
+    font-size: 48px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container1 {
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 0 15px; /* Adding left and right padding */
+  }
+  
+  .carousel-container {
+    position: relative;
+    margin: 0 100px; /* Adding left and right margin */
+  }
+  
+  .carousel-inner {
+    border-radius: 30px;
+    overflow: hidden; /* Ensure border-radius applies to the children */
+  }
+  
+  .carousel-item {
+    position: relative;
+    height: 580px; /* Set the height of carousel items */
+  }
+  
+  .service-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fit within the specified height */
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    color: white;
+    border-radius: 15px;
+  }
+  
+  .carousel-description {
+    max-width: 400px; /* Adjust the width as needed */
+    /**background: rgba(0, 0, 0, 0.4); /* Optional: Add a semi-transparent background for better readability */
+    padding: 20px;
+    border-radius: 20px; /* Adding a border-radius to the description box */
+  }
+  
+  .carousel-caption h5,
+  .carousel-caption p {
+    margin: 0 0 15px 0; /* Remove default margins */
+  }
+  
+  .carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  }
+  
+  .carousel-caption button {
+    background-color: #577238; /* Change to your desired color */
+    border: none;
+    color: white;
+    padding: 20px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px; /* Add border-radius to the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+  }
+
+  .carousel-caption button:hover {
+    background-color: #273418; /* Change to a darker shade or different color on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+  }
+
+
+footer.bg-dark {
+    background: linear-gradient(to right, #000000, #111d00, #131a09);
+  }
+
+  /* Footer styles */
+footer {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* White text color */
+    padding: 20px 0; /* Padding top and bottom */
+}
+
+footer .container {
+    max-width: 1140px; /* Maximum width for the container */
+    margin: 0 auto; /* Center align the container */
+}
+
+footer h5 {
+    color: #ffffff; /* White text color for headings */
+    font-size: 1.2rem; /* Font size for headings */
+    margin-bottom: 1.5rem; /* Bottom margin for headings */
+}
+
+footer p {
+    color: #ffffff; /* White text color for paragraphs */
+    font-size: 0.9rem; /* Font size for paragraphs */
+}
+
+footer a {
+    color: #ffffff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Social media icons */
+footer ion-icon {
+    font-size: 1.2rem; /* Icon size */
+    margin-right: 10px; /* Right margin between icons */
+    margin-top: 20px;
+}

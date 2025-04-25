@@ -1,0 +1,135 @@
+<?php
+session_start();
+$host = 'localhost';
+$db = 'sports_a_blaze';
+$user = 'root';
+$pass = ''; // Update your database password here
+
+// PDO connection
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
+    // Set PDO attributes as needed (optional)
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    // Handle connection error
+    die("Connection failed: " . $e->getMessage());
+}
+
+
+
+if(isset($_POST['login'])) {
+    if(isset($_POST["email"], $_POST["password"])) {
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+
+        $sql = "SELECT * FROM users WHERE email = ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$email]);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($row) {
+            if (password_verify($password, $row['password'])) {
+                $_SESSION["id"] = $row['id']; // Assuming $id should be $row['id']
+                $_SESSION["email"] = $email;
+                $_SESSION["name"] = $row['name'];
+                $_SESSION['user_id'] = $row['id'];
+                if ($row["userType"] == "user") {
+                    header("Location: connection.php");
+                } elseif ($row["userType"] == "admin") {
+                    header("Location: Admin.php");
+                }
+                exit();
+            } else {
+                $_SESSION['error'] = "Email or Password is incorrect.";
+            }
+        } else {
+            $_SESSION['error'] = "Email or Password is incorrect.";
+        }
+    } else {
+        $_SESSION['error'] = "Email and Password are required.";
+    }
+}
+?>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="style_login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    
+    
+</head>
+<body>
+<div>
+<div class="form-container">
+  <button type="button" class="close-button" aria-label="Close" onclick="window.location.href='landingpage.php';" style="position: absolute; top: 10px; right: 30px; background: none; border: none; font-size: 40px; color: white;">
+    <span aria-hidden="true">&times;</span>
+  </button>
+<form action="#" method="POST">
+    <div style="font-size: 27px; font-weight: 500;">
+    <ion-icon name="key" style="height: 27px; width: 27px; margin-top: 20px;"></ion-icon>
+        Login
+    </div>
+
+    <?php if(isset($_SESSION['error'])): ?>
+            <div class="alert alert-danger" role="alert">
+                <?php 
+                echo $_SESSION['error']; 
+                unset($_SESSION['error']); // Clear the error after displaying it
+                ?>
+            </div>
+    <?php endif; ?>
+
+    <div class="mb-3">
+  <label for="email" class="form-label"></label>
+  <div class="input-container">
+    <ion-icon name="person-circle"></ion-icon>
+    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+  </div>
+</div>
+
+<div class="mb-3">
+  <label for="password" class="form-label"></label>
+  <div class="input-container">
+    <ion-icon name="lock-closed"></ion-icon>
+    <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+  </div>
+</div>
+
+<div class="col-12">
+  <p class="text-left"> 
+    <a href="forgot_pass.php" style="text-decoration:none; color: #007bff; font-size: 15px;">Forgot Password?</a>
+  </p>
+</div>
+
+<button type="submit" name="login" class="btn-custom">Login</button>
+
+<div class="col-12 login-link">
+  <p class="text-center mt-3">Don't have an account yet? 
+    <a href="signup.php" style="text-decoration:none;">Register</a>
+  </p>
+
+</div>
+
+</form>
+</div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

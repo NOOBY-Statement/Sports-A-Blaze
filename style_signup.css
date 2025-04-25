@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-image: url('bg_login.png'); /* Background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* SIGN UP PAGE*/
+
+.container {
+  display: flex;
+  justify-content: flex-start; /* Align form to the left */
+  margin-left: 20px; /* Add margin to the left */
+  margin-top: 10px; /* Add margin to the top */
+}
+
+.form-container {
+  width: 500px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  margin-left: 20px; /* Add margin to the left */
+}
+
+
+  .form-label {
+    font-weight: bold;
+    color: #333333;
+
+  }
+
+  .form-control {
+    padding: 15px;
+    border-radius: 40px; /* Uniform border-radius */
+    border: none;
+    width: 100%;
+    margin-bottom: 7px;
+    box-shadow: none;
+}
+
+  .btn-primary {
+    background-color: #075826;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      width: 200px;
+      cursor: pointer;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #01310c;
+    }
+
+    .form-check-label {
+        font-weight: normal;
+    }
+  
+    .login-link {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .input-error {
+      border-color: red !important;
+  }
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+      justify-content: center; /* Center align on smaller screens */
+      margin: 20px; /* Adjust margin for centering */
+  }
+
+  .form-container {
+      width: 90%; /* Adjust width for smaller screens */
+      max-width: 400px; /* Set maximum width */
+  }
+}

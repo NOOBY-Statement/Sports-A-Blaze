@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sports A-Blaze</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    
+    <div class="container">
+        <!-- SIDEBAR -->
+        <div class="navigation">
+            <ul>
+            <li>
+                <a href="#">
+                <span class="icon">
+                    <img src="logo.png" alt="Sports A-Blaze Logo">
+                </span>
+                <span class="title" style="font-size: 20px;">Sports A-Blaze</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="showPanel('reservationsPanel')">
+                <span class="icon">
+                    <ion-icon name="cart-sharp"></ion-icon>
+                </span>
+                <span class="title">Reservation</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="showPanel('myReservationPanel')">
+                <span class="icon">
+                    <ion-icon name="clipboard"></ion-icon>
+                </span>
+                <span class="title">My Reservations</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="showPanel('profilePanel')">
+                <span class="icon">
+                    <ion-icon name="person"></ion-icon>
+                </span>
+                <span class="title">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <span class="icon">
+                    <ion-icon name="log-out-sharp"></ion-icon>
+                </span>
+                <span class="title">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+        <!-- MAIN CONTENT -->
+        <div class="main">
+            <div class="topbar">
+            <div class="toggle" onclick="toggleSidebar()">
+                <ion-icon name="menu"></ion-icon>
+            </div>
+        </div>
+    
+        <!-- Panels -->
+        <div id="reservationsPanel" class="panel active">
+            <h3>List of Equipment</h3>
+            <br>
+
+            <div class="button-container">
+                <button id="courtButton" class="switch-button">Court</button>
+                <button id="equipmentButton" class="switch-button active">Equipment</button>
+            </div>
+
+    <div id="equipmentPanel" class="content-panel active">
+        <!-- START DIV BASKETBALL EQUIPMENT -->
+    <div>
+    <h4>Basketball</h4>
+    <div class="gallery">
+        <div class="contents">
+        <div class="iconBx">
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <p>Available</p>
+        </div>
+        <div>
+            <img src="bball.png">
+            <h5>Ball</h5>
+            <button class="reserve-btn" onclick="setSportType('Basketball')">Reserve</button>
+            <input type="hidden" name="sportType" id="Basketball">
+        </div>
+        </div>
+        <div class="contents">
+        <div class="iconBx">
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <p>Available</p>
+        </div>
+        <div>
+            <img src="kneepad2.png">
+            <h5>Basketball Knee Pad</h5>
+            <button class="reserve-btn" onclick="setSportType('Basketball')">Reserve</button>
+            <input type="hidden" name="sportType" id="Basketball">
+        </div>
+        </div>
+        <div class="contents">
+        <div class="iconBx">
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <p>Available</p>
+        </div>
+        <div>
+            <img src="jersey.png">
+            <h5>Jersey Shirt</h5>
+            <button class="reserve-btn" onclick="setSportType('Basketball')">Reserve</button>
+            <input type="hidden" name="sportType" id="Basketball">
+        </div>
+        </div>
+        <div class="contents">
+            <div class="iconBx">
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <p>Available</p>
+            </div>
+            <div>
+                <img src="socks.png">
+                <h5>Socks</h5>
+                <button class="reserve-btn" onclick="setSportType('Basketball')">Reserve</button>
+                <input type="hidden" name="sportType" id="Basketball">
+            </div>
+            </div>
+    </div>
+    </div>
+    
+    <!-- END DIV BASKETBALL EQUIPMENT -->
+
+    <!-- START DIV BADMINTON EQUIPMENT -->
+    <div>
+    <h4>Badminton</h4>
+    <div class="gallery">
+        <div class="contents">
+        <div class="iconBx">
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <p>Available</p>
+        </div>
+        <div>
+            <img src="shuttlecock.png">
+            <h5>Shuttlecock</h5>
+            <button class="reserve-btn" onclick="setSportType('Badminton')">Reserve</button>
+            <input type="hidden" name="sportType" id="Badminton">
+        </div>
+        </div>
+        <div class="contents">
+        <div class="iconBx">
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <p>Available</p>
+        </div>
+        <div>
+            <img src="racket.png">
+            <h5>Racket</h5>
+            <button class="reserve-btn" onclick="setSportType('Badminton')">Reserve</button>
+            <input type="hidden" name="sportType" id="Badminton">
+        </div>
+        </div>
+        <div class="contents">
+        <div class="iconBx">
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <p>Available</p>
+        </div>
+        <div>
+            <img src="wristband.png">
+            <h5>Wrist Band</h5>
+            <button class="reserve-btn" onclick="setSportType('Badminton')">Reserve</button>
+            <input type="hidden" name="sportType" id="Badminton">
+        </div>
+        </div>
+        <div class="contents">
+            <div class="iconBx">
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <p>Available</p>
+            </div>
+            <div>
+                <img src="visorhat.png">
+                <h5>Visor Hat</h5>
+                <button class="reserve-btn" onclick="setSportType('Badminton')">Reserve</button>
+                <input type="hidden" name="sportType" id="Badminton">
+            </div>
+            </div>
+    </div>
+    </div>
+    <!-- END DIV BADMINTON EQUIPMENT -->
+
+    <!-- START DIV VOLLEYBALL EQUIPMENT -->
+    <div>
+    <h4>Volleyball</h4>
+    <div class="gallery">
+        <div class="contents">
+        <div class="iconBx">
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <p>Available</p>
+        </div>
+        <div>
+            <img src="vball.png">
+            <h5>Ball</h5>
+            <button class="reserve-btn" onclick="setSportType('Volleyball')">Reserve</button>
+            <input type="hidden" name="sportType" id="Volleyball">
+        </div>
+        </div>
+        <div class="contents">
+        <div class="iconBx">
+            <ion-icon name="checkmark-circle"></ion-icon>
+            <p>Available</p>
+        </div>
+        <div>
+            <img src="knee-pad.png">
+            <h5>Volleyball Knee Pad</h5>
+            <button class="reserve-btn" onclick="setSportType('Volleyball')">Reserve</button>
+            <input type="hidden" name="sportType" id="Volleyball">
+        </div>
+        </div>
+            <div class="contents">
+            <div class="iconBx">
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <p>Available</p>
+            </div>
+        <div>
+            <img src="elbowpad.png">
+            <h5>Elbow Pad</h5>
+            <button class="reserve-btn" onclick="setSportType('Volleyball')">Reserve</button>
+            <input type="hidden" name="sportType" id="Volleyball">
+        </div>
+        </div>
+    </div>
+    </div>
+
+        <!--COURT CONTENT-->
+        <div id="courtSection">
+        <div>
+            <h4>Court</h4>
+            <div class="gallery">
+                <div class="contents">
+                <div class="iconBx">
+                    <ion-icon name="checkmark-circle"></ion-icon>
+                    <p>Available</p>
+                </div>
+                <div>
+                    <img src="bball-court.jpg" style="width: 50%;">
+                    <h5>Basketball Court</h5>
+                    <button class="reserve-btn" onclick="setSportType('Basketball')">Reserve</button>
+                    <input type="hidden" name="sportType" id="Basketball">
+                </div>
+                </div>
+                <div class="contents">
+                <div class="iconBx">
+                    <ion-icon name="checkmark-circle"></ion-icon>
+                    <p>Available</p>
+                </div>
+                <div>
+                    <img src="badminton-court.jpg" style="width: 50%;">
+                    <h5>Badminton Court</h5>
+                    <button class="reserve-btn" onclick="setSportType('Badminton')">Reserve</button>
+                    <input type="hidden" name="sportType" id="Badminton">
+                </div>
+                </div>
+                    <div class="contents">
+                    <div class="iconBx">
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                        <p>Available</p>
+                    </div>
+                <div>
+                    <img src="vball_court.jpg" style="width: 50%;">
+                    <h5>Volleyball Court</h5>
+                    <button class="reserve-btn" onclick="setSportType('Volleyball')">Reserve</button>
+                    <input type="hidden" name="sportType" id="Volleyball">
+                </div>
+                </div>
+    </div> <!--END div contents-->
+    </div> <!--END div gallery-->
+</div> <!--END div dasboardPanel-->
+</div>
+
+    <!-- Popup Form -->
+
+<div id="reservationPopup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+            <h2>Reservation Form</h2>
+        
+        <form id="reservationForm" action="conn.php" method="post">
+
+        <input type="text" id="name" name="name" required placeholder="Name"><br><br>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <input type="tel" id="contactNumber" name="contactNumber" required placeholder="Contact Number">
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="Email">
+            </div>
+        </div>
+
+        <textarea id="address" name="address" required placeholder="Address"></textarea><br><br>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="pickupDate">Pickup Date</label>
+                <input type="date" id="pickupDate" name="pickupDate" required>
+            </div>
+            <div class="form-group">
+                <label for="returnDate">Return Date</label>
+                <input type="date" id="returnDate" name="returnDate" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="startTime">Start Time</label>
+                <input type="time" id="startTime" name="startTime" required>
+            </div>
+            <div class="form-group">
+                <label for="endTime">End Time</label>
+                <input type="time" id="endTime" name="endTime" required>
+            </div>
+        </div>
+        
+        <button type="submit">Submit Reservation</button>
+        </form>
+    </div>
+</div>
+</div>
+
+<!-- DITO KAYO MAGSTART, MGA PANEL TO-->
+
+    <!-- Panel for My Reservations -->
+    <div id="myReservationPanel" class="panel">
+        <h3>My Reservations</h3>
+            <p>Content for My Reservations</p>
+    </div>
+    <!-- End div Panel-->
+
+
+    <!-- Panel for Profile -->
+    <div id="profilePanel" class="panel">
+        <h3>Profile</h3>
+            <p>Content for Profile</p>
+    </div>
+    <!-- End div Panel-->
+    
+    <div id="logoutPanel" class="panel">
+        <h3>Logout</h3>
+            <p></p>
+    </div>
+    <!-- End div Panel-->
+
+</div>
+</div>
+</div> <!--END div main-->
+</div> <!--END div container-->
+
+    <!--JAVASCRIPT-->
+    <script src="main.js"></script>
+    <!--IONICONS-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

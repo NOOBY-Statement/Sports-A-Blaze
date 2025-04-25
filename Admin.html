@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sports A-Blaze</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    
+    <!--SIDEBAR-->
+    <div class="container">
+        <div class="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <img src="logo.png" alt="Sports A-Blaze Logo">
+                    </span>
+                    <span class="title" style="font-size: 20px;">Sports A-Blaze</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="showPanel('dashboardPanel')">
+                    <span class="icon">
+                        <ion-icon name="home"></ion-icon>
+                    </span>
+                    <span class="title">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="showPanel('reservationPanel')">
+                    <span class="icon">
+                        <ion-icon name="cart-sharp"></ion-icon>
+                    </span>
+                    <span class="title">Reservation</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="showPanel('equipmentPanel')">
+                    <span class="icon">
+                        <ion-icon name="basket-sharp"></ion-icon>
+                    </span>
+                    <span class="title">Equipment</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="log-out-sharp"></ion-icon>
+                    </span>
+                    <span class="title">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!--========== MAIN ========= -->
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle" onclick="toggleSidebar()">
+                <ion-icon name="menu"></ion-icon>
+            </div>
+        </div>
+    <!---->
+
+    
+    <!-- DITO KAYO MAGSTART MAGLAGAY NG DIV-->
+        <!-- Panels -->
+        <div id="dashboardPanel" class="panel active">
+            <h3>Dashboard</h3>
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">20</div>
+                        <div class="cardName">Total Reservations</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="receipt"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">12</div>
+                        <div class="cardName">Equipment Reservations</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="basketball"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">8</div>
+                        <div class="cardName">Court Reservations</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="golf"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">20</div>
+                        <div class="cardName">Total Accounts</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="people"></ion-icon>
+                    </div>
+                </div>
+                
+            </div> <!--END div cardBox-->
+        </div> <!--END div dasboardPanel-->
+
+        <div id="reservationPanel" class="panel">
+            <h3>Reservations</h3>
+            <p>DITO KAYO MAGSTART</p>
+        </div> <!--END div reservationPanel-->
+
+        <div id="equipmentPanel" class="panel">
+            <h3>Equipment</h3>
+            <p>DITO KAYO MAGSTART</p>
+        </div> <!--END div equipmentPanel-->
+
+        <!--HANGGANG DITO LANG-->
+
+
+    </div> <!--END div main-->
+    </div> <!--END div container-->
+
+
+    <!--JAVASCRIPT-->
+    <script src="main.js"></script>
+
+    <!--IONICONS-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
